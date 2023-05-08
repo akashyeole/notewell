@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 
-app.get("/", (req, res)=>{
-    res.send({msg: "I am alive!"});
-})
+app.use(express.json());
+app.use("/api/v1/auth", require("./routes/auth"));
+app.use("/api/v1/notes", require("./routes/notes"));
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
