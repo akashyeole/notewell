@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const User  = require("../models/User");
 const {body} = require("express-validator");
-const { registerUser, loginUser } = require("../controllers/AuthController");
+const { registerUser, loginUser, getUser } = require("../controllers/AuthController");
+const fetchUser = require("../middleware/fetchuser");
 
 // User registeration route
 router.post("/registeruser", 
@@ -21,6 +21,12 @@ router.post("/loginuser",
         body("password", "Minimum length 8").isLength({ min: 8 })
     ],
     loginUser
+)
+
+// Fetch logged in user route
+router.post("/getuser",
+    fetchUser,
+    getUser
 )
 
 module.exports = router;

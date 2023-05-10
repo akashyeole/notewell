@@ -25,7 +25,7 @@ const registerUser = async (req, res)=>{
                     password: hash
                 }).then((user)=>{
                     // creating authToken
-                    const authToken = jwt.sign({id: user.id}, process.env.JWT_SECRET);
+                    const authToken = jwt.sign({user:{id: user.id}}, process.env.JWT_SECRET);
                     res.status(200).json({authToken});
                 }).catch((err)=>{
                     res.status(400).json({errors: [{type: "db", msg: err.message}]});
@@ -45,21 +45,21 @@ const loginUser = async (req, res)=>{
     // Check fields validation
     const errors = validationResult(req);
     if(errors.isEmpty()){
-        // Check if user already exists
+        // Check if user exists
         try{
             const isFound = await User.findOne({email: req.body.email})
             // If yes verfiy credentials
             if(isFound){
                 const validCred = await bcrypt.compare(req.body.password, isFound.password);
                 if(validCred){
-                    const authToken = jwt.sign({id: isFound.id}, process.env.JWT_SECRET);
+                    const authToken = jwt.sign({user:{id: isFound.id}}, process.env.JWT_SECRET);
                     res.status(200).json({authToken});
                 }else{
                     res.status(400).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
                 }
             }else{
                 // If not found bad request
-                res.status(400).json({errors: [{type: "dvalidation", msg: "Invalid credentials"}]});
+                res.status(400).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
             }
         }catch(err){
             res.status(500).json({errors: [{type: "db", msg: err.message}]});
@@ -69,7 +69,20 @@ const loginUser = async (req, res)=>{
     }
 }
 
+// Controller function for getting user data using id
+const getUser = async (req, res)=>{
+    try{
+        const userId = req.user.id;
+        // Fetchuser details by id recieved in header
+        const user = await User.findById(userId).select("-password");
+        res.status(200).json(user);
+    }catch(err){
+        res.status(500).json({errors: [{type: "db", msg: err.message}]});
+    }
+}
+
 module.exports ={
     registerUser,
-    loginUser
+    loginUser,
+    getUser
 }
