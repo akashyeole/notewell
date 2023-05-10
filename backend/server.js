@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Linking routes
 app.use("/api/v1/auth", require("./routes/auth"));
-app.use("/api/v1/notes", require("./routes/note"));
+app.use("/api/v1/note", require("./routes/note"));
 
 
 // Connect mongoose and then start the server

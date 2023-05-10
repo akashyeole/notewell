@@ -24,7 +24,7 @@ router.post("/loginuser",
 )
 
 // Fetch logged in user route
-router.post("/getuser",
+router.post("/getuserbytoken",
     fetchUser,
     getUser
 )
