@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./Navbar.css"
-import logo from "../../Images/logo_transparent.png";
+import Logo from '../Logo/Logo';
 
 const Navbar = () => {
   return (
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <Link class="navbar-brand d-flex gap-2" to="/">
-          <img src = {logo} style = {{height: "3rem"}}/>
-          <div>NoteWell</div>
+    <nav className="navbar bg-body-tertiary">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          <Logo iconSize = "3rem" fontSize = "2rem"/>
         </Link>
       </div>
     </nav>

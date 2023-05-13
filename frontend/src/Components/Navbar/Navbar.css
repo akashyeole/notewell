@@ -3,8 +3,3 @@
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
 }
-
-.navbar-brand{
-    font-family: 'SF Pro Display Black';
-    font-size: 2rem;
-}
