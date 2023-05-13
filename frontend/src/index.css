@@ -1,21 +1,20 @@
 @font-face {
-  font-family: myFirstFont;
-  src: url(./Fonts/SFNSText-Medium.otf);
+  font-family: "SF Pro";
+  src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro.ttf");
+  /* font-weight: normal; */
+}
+
+@font-face {
+  font-family: "SF Pro Display Black";
+  src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.otf");
   /* font-weight: normal; */
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'myFirstFont', 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-

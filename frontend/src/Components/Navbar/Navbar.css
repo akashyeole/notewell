@@ -1,0 +1,10 @@
+.some{
+    background-color: rgba(251,251,253,.5);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+
+.navbar-brand{
+    font-family: 'SF Pro Display Black';
+    font-size: 2rem;
+}
