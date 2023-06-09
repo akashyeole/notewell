@@ -1,34 +1,41 @@
 .logo-container{
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display Black';
+    /* margin-left: -6px; */
+    font-family: 'SF Pro';
+    font-weight: 800;
 }
 
 .l-caps{
-    color: #0070f3;
+    color: var(--default-l-a);
 }
 
 @keyframes logo-animator {
     
     0% {transform: translateX(-50px);
-        width: 0px;
+        /* width: 0px; */
+        width: 0%;
         opacity: 0;
     }
     50%{
-        transform: translateX(-50px);
-        opacity: 0;
+        /* transform: translateX(-25px); */
+        width: 50%;
+        opacity: 50;
     }
     100% { transform: translateX(0px);
-        width: 3.1rem;
-        visibility: visible;
+        width: 100%;
+        /* visibility: visible; */
         opacity: 100;
     }
 }
 
 .l-small{
-    transition: all ease-in-out;
-    width: 0px;
-    visibility: hidden;
+    transition: tranform ease-in-out 1700ms;
+    transition: opacity ease-in-out 1700ms;
+    width: 0%;
+    opacity: 0;
+}
+
+.logo-anime{
     animation-name: logo-animator;
-    animation-duration: 1000ms;
-    animation-delay: 1000ms;
+    animation-duration: 1700ms;
     animation-fill-mode: forwards;
 }

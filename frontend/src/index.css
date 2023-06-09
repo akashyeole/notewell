@@ -1,3 +1,9 @@
+:root{
+  --default-l-a: #0070f3;
+  --default-l-b: #0900F3;
+  --default-l-c: #00EAF3;
+}
+
 @font-face {
   font-family: "SF Pro";
   src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro.ttf");
@@ -6,15 +12,23 @@
 
 @font-face {
   font-family: "SF Pro Display Black";
-  src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.otf");
-  /* font-weight: normal; */
+  src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.otf") format("opentype"),
+    url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.svg") format("svg"),
+    url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.ttf") format("truetype");
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'SF Pro', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./Images/bg.jfif');
 }
