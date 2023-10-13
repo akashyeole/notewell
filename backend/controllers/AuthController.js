@@ -13,7 +13,7 @@ const registerUser = async (req, res)=>{
             const isFound = await User.findOne({email: req.body.email})
                 // If yes send error
             if(isFound){
-                res.status(400).json({errors: [{type: "validation", msg: "User already registered with this email"}]});
+                res.status(409).json({errors: [{type: "validation", msg: "User already registered with this email"}]});
             }else{
                 // Otherwise add user
                 // salting and hashing
@@ -28,11 +28,11 @@ const registerUser = async (req, res)=>{
                     const authToken = jwt.sign({user:{id: user.id}}, process.env.JWT_SECRET);
                     res.status(200).json({authToken});
                 }).catch((err)=>{
-                    res.status(400).json({errors: [{type: "db", msg: err.message}]});
+                    res.status(503).json({errors: [{type: "db", msg: err.message}]});
                 });
             }
         }catch(err){
-            res.status(500).json({errors: [{type: "db", msg: err.message}]});
+            res.status(503).json({errors: [{type: "db", msg: err.message}]});
         }
     }else{
         res.status(500).json(errors);
@@ -55,14 +55,14 @@ const loginUser = async (req, res)=>{
                     const authToken = jwt.sign({user:{id: isFound.id}}, process.env.JWT_SECRET);
                     res.status(200).json({authToken});
                 }else{
-                    res.status(400).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
+                    res.status(401).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
                 }
             }else{
                 // If not found bad request
-                res.status(400).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
+                res.status(401).json({errors: [{type: "validation", msg: "Invalid credentials"}]});
             }
         }catch(err){
-            res.status(500).json({errors: [{type: "db", msg: err.message}]});
+            res.status(503).json({errors: [{type: "db", msg: err.message}]});
         }
     }else{
         res.status(500).json(errors);
@@ -77,7 +77,7 @@ const getUser = async (req, res)=>{
         const user = await User.findById(userId).select("-password");
         res.status(200).json(user);
     }catch(err){
-        res.status(500).json({errors: [{type: "db", msg: err.message}]});
+        res.status(503).json({errors: [{type: "db", msg: err.message}]});
     }
 }
 
