@@ -3,8 +3,6 @@ import "./Logo.css";
 import applicationContext from '../../Context/application/applicationContext';
 
 
-
-
 const Logo = (props) => {
   function logo_hover(){
     let act = document.getElementsByClassName("lord-logo");
