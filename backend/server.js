@@ -6,9 +6,10 @@ const app = express();
 // Middleware for allowing JSON format data
 app.use(express.json());
 
-// Linking routes (including routes)
+// Linking routes
 app.use("/api/v1/auth", require("./routes/auth"));
 app.use("/api/v1/note", require("./routes/note"));
+
 
 // Connect mongoose and then start the server
 mongoose.connect(process.env.MONGO_URI)
