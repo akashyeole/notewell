@@ -1,0 +1,38 @@
+.input-error-box{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 0;
+    padding: 0.2rem 1.2rem;
+    border: 1px solid #fff2f4;
+    border-radius: 13px;
+    position: absolute;
+    top: 103%;
+    width: 100%;
+    z-index: -1;
+}
+
+body.light .input-error-box{
+    background-color: #fff2f4;;
+}
+
+
+.error-text{
+    color: #e30000; 
+    font-size: 0.8rem;
+}
+
+.input-error-box .error-icon img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.input-error-box .error-icon{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    bottom: 0.05rem;
+    right: 0.7rem;
+}

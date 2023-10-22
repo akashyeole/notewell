@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import "./Logo.css";
 import applicationContext from '../../Context/application/applicationContext';
 
@@ -29,7 +29,7 @@ const Logo = (props) => {
       stroke="45"
       style={{width:props.iconSize, height:props.iconSize, transition:"all ease-in-out 300ms"}}>
     </lord-icon> */}
-    <div className="d-flex" style={{fontSize: props.fontSize, color: applicationState.theme == "dark" ? "white" : "black"}}>
+    <div className="d-flex" style={{fontSize: props.fontSize, color: applicationState.theme === "dark" ? "white" : "black"}}>
         <div className = "l-caps">N</div> <div className="ote l-small">ote</div> 
         <div className = "l-caps">W</div> <div className="ell l-small">ell</div>
     </div>

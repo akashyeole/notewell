@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 } */
+
+.page-container{
+  margin-left: 111.6px;
+  margin-right: 111.6px;
+  position: relative;
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.rounded-dialog{
+  border-radius: 30px;
+}
+
+.ashadow{
+  box-shadow: 0 11px 34px 0 rgba(0,0,0,.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}

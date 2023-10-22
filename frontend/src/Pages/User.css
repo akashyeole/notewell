@@ -1,0 +1,45 @@
+.user-sign{
+    width: 37.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+body.light .user-sign{
+    background-color: white;
+}
+
+.dialog-msg{
+    font-weight: 650;
+    font-size: 2rem;
+}
+
+.sign-input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top:2rem;
+    position: relative;
+}
+
+.switchlabel{
+    margin-top: 0.5rem;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.switchlabel:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
+    text-underline-offset: 1px;
+}
+
+body.light .switchlabel{
+    color: var(--default-l-a);
+    font-weight: 300;
+}

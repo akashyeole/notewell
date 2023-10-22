@@ -1,9 +1,8 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
-import Home from './Components/Home/Home';
-import About from './Components/About/About';
-import { useContext, useEffect } from 'react';
+import {Home, About, User} from "./Pages"
+import { useEffect } from 'react';
 import ApplicationState from './Context/application/ApplicationState';
 
 // const appContext = useContext(applicationContext);
@@ -33,11 +32,11 @@ function App() {
     <>
       <ApplicationState>
         <Router>
-          {/* <Navbar /> */}
           <Navbar />
           <Routes>
             <Route path="/" element = {<Home/>}/>
             <Route path="/about" element = {<About/>}/>
+            <Route path="/user" element = {<User/>}/>
           </Routes>
         </Router>
       </ApplicationState>

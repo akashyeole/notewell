@@ -14,13 +14,13 @@ const ApplicationState  = (props)=>{
         link.href = `./logo_static_${applicationState.theme}.png`;
         // Nav
         const nav = document.querySelector(".nav-container");
-        nav.style.background = (applicationState.theme ==="dark" ? "rgba(0,0,0, 0.85)" : "rgba(255, 255, 255, 0.8)");
+        nav.style.background = (applicationState.theme ==="dark" ? "rgba(0,0,0, 0.85)" : "rgba(251, 251, 253, 0.8)");
         // Body
         const body = document.querySelector("body")
         body.classList.add(applicationState.theme);
         if(applicationState.theme === 'dark') body.classList.remove('light');
         else body.classList.remove('dark');
-        body.style.backgroundColor = (applicationState.theme ==="dark" ? "black" : "white")
+        body.style.backgroundColor = (applicationState.theme ==="dark" ? "black" : "#fbfbfd")
 
     }, [applicationState.theme])
 

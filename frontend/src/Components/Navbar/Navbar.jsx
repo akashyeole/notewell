@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react'
 import "./Navbar.css"
 import Logo from '../Logo/Logo'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import applicationContext from '../../Context/application/applicationContext'
 
 const Navbar = () => {
   const { applicationState, updateAppState } = useContext(applicationContext);
+  const navigate = useNavigate();
   useEffect(()=>{
     const onPageLoad = () => {
       const searchButton = document.querySelector("nav .desktop-nav .search-button");
@@ -100,7 +101,7 @@ const Navbar = () => {
                   <li>
                     <Link className="navbar-brand" to="/"><Logo iconSize = "2rem" fontSize = "1.5rem"></Logo></Link>
                   </li>
-                  <li className= "account-button">
+                  <li className= "account-button" onClick={()=>{navigate('/user')}}>
                     <lord-icon
                           src="https://cdn.lordicon.com/ljvjsnvh.json"
                           trigger="hover"
@@ -115,8 +116,8 @@ const Navbar = () => {
                   <li className="desktop-logo"><Link className="navbar-brand" to="/" style={{opacity: 1}}><Logo iconSize = "2.1rem" fontSize = "1.5rem"/></Link></li>
                   <li><Link className="navbar-brand" to="/">Home</Link></li>
                   <li><Link className="navbar-brand" to="/about">About</Link></li>
-                  <li><Link className="navbar-brand" to="/about">Help</Link></li>
-                  <li><Link className="navbar-brand" to="/about">Feedback</Link></li>
+                  <li><Link className="navbar-brand" to="/help">Help</Link></li>
+                  <li><Link className="navbar-brand" to="/feedback">Feedback</Link></li>
 
                   <li className = "search-button">
                     <lord-icon
@@ -126,14 +127,14 @@ const Navbar = () => {
                         style={{width:"1.8rem", height:"1.8rem", cursor: "pointer"}}>
                     </lord-icon>
                   </li>
-                  <li className = "account-button">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/ljvjsnvh.json"
-                        trigger="hover"
-                        colors={applicationState.theme === "dark" ? "primary:#00EAF3,secondary:#0070f3" : "primary:#000000,secondary:#0070f3"}
-                        state="hover-2"
-                        style={{width:"1.8rem", height:"1.8rem", cursor: "pointer"}}>
-                    </lord-icon>
+                  <li className = "account-button" onClick={()=>{navigate('/user')}}>
+                      <lord-icon
+                          src="https://cdn.lordicon.com/ljvjsnvh.json"
+                          trigger="hover"
+                          colors={applicationState.theme === "dark" ? "primary:#00EAF3,secondary:#0070f3" : "primary:#000000,secondary:#0070f3"}
+                          state="hover-2"
+                          style={{width:"1.8rem", height:"1.8rem", cursor: "pointer"}}>
+                      </lord-icon>
                   </li>
 
                   <li>

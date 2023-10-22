@@ -12,7 +12,6 @@ const fetchUser = (req, res, next)=>{
             req.user = data.user;
             next();
         } catch(err){
-            console.log("tmkc");
             res.status(401).json({error: "Invalid token"});
         }
     }

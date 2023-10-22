@@ -2,19 +2,18 @@
   --default-l-a: #0070f3;
   --default-l-b: #0900F3;
   --default-l-c: #00EAF3;
+  --light: #fbfbfd;
 }
 
 @font-face {
   font-family: "SF Pro";
   src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro.ttf");
-  /* font-weight: normal; */
 }
+
 
 @font-face {
   font-family: "SF Pro Display Black";
-  src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.otf") format("opentype"),
-    url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.svg") format("svg"),
-    url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.ttf") format("truetype");
+  src:url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.ttf") 
 }
 
 *, *::before, *::after{
@@ -30,5 +29,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./Images/bg.jfif');
+  /* background-image: url('./Images/bg.jfif'); */
 }
