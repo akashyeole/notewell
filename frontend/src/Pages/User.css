@@ -1,5 +1,5 @@
 .user-sign{
-    width: 37.5rem;
+    width: 38rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,13 @@
     padding-right: 5rem;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
+    transition: all 200ms ease;
+}
+
+.user-sign{
+    animation-name: appear-animation;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
 body.light .user-sign{

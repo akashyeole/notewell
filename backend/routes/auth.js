@@ -7,9 +7,9 @@ const fetchUser = require("../middleware/fetchuser");
 // User registeration route
 router.post("/registeruser", 
     [
-        body("name", "Minimum length 3").isLength({ min: 3 }),
+        body("name", "Minimum name length must be 3 characters").isLength({ min: 3 }),
         body("email", "Invalid email").isEmail(),
-        body("password", "Minimum length 8").isLength({ min: 8 })
+        body("password", "Minimum password length must be 8 characters").isLength({ min: 8 })
     ],
     registerUser
 );
@@ -18,7 +18,7 @@ router.post("/registeruser",
 router.post("/loginuser",
     [
         body("email", "Invalid email").isEmail(),
-        body("password", "Minimum length 8").isLength({ min: 8 })
+        body("password", "Minimum password length must be 8 characters").isLength({ min: 8 })
     ],
     loginUser
 )

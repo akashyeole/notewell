@@ -16,7 +16,7 @@ const TextInput = (props) => {
 
     return (
         <div className={`text-input ${props.clist}`}>
-            <input ref = {props.reff} type={props.type} id={props.id ? props.id : ''} value = {value} onChange={handleChange} style = {{paddingRight : `${props.type === 'password' ? '2.4rem' : '1.2rem'}`}} formNoValidate disabled = {props.disabled}/>
+            <input ref = {props.reff} type={props.type} id={props.id ? props.id : ''} value = {value} onChange={handleChange} style = {{paddingRight : `${props.clist.indexOf('submit') !== -1 ? `2.4rem` : '1.2rem'}`}} formNoValidate disabled = {props.disabled} autoComplete='off'/>
             <label className = {value && 'filled'} htmlFor={props.id ? props.id : ''}>{props.label}</label>
             <button tabIndex = {`${props.clist.indexOf('senabled') === -1 ? "-1" : "auto"}`} type = 'submit' to='/' className='submit-icon-link' disabled = {props.loading}/>
         </div>

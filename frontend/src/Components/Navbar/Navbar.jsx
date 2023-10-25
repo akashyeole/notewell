@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import "./Navbar.css"
 import Logo from '../Logo/Logo'
 import { Link, useNavigate } from 'react-router-dom'
-import applicationContext from '../../Context/application/applicationContext'
+import { useApp } from '../../Hooks'
 
 const Navbar = () => {
-  const { applicationState, updateAppState } = useContext(applicationContext);
+  const { applicationState, updateAppState } = useApp();
   const navigate = useNavigate();
   useEffect(()=>{
     const onPageLoad = () => {
