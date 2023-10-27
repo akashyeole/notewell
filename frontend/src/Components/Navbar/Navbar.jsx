@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import "./Navbar.css"
 import Logo from '../Logo/Logo'
 import { Link, useNavigate } from 'react-router-dom'
-import { useApp } from '../../Hooks'
+import { useApp, useAuth } from '../../Hooks'
 
 const Navbar = () => {
   const { applicationState, updateAppState } = useApp();
+  const { auth } = useAuth();
   const navigate = useNavigate();
   useEffect(()=>{
     const onPageLoad = () => {
@@ -99,7 +100,7 @@ const Navbar = () => {
                     </div>
                   </li>
                   <li>
-                    <Link className="navbar-brand" to="/"><Logo iconSize = "2rem" fontSize = "1.5rem"></Logo></Link>
+                    <Link className="navbar-brand" to="/" ><Logo iconSize = "2rem" fontSize = "1.5rem"></Logo></Link>
                   </li>
                   <li className= "account-button" onClick={()=>{navigate('/user')}}>
                     <lord-icon
@@ -117,7 +118,7 @@ const Navbar = () => {
                   <li><Link className="navbar-brand" to="/">Home</Link></li>
                   <li><Link className="navbar-brand" to="/about">About</Link></li>
                   <li><Link className="navbar-brand" to="/help">Help</Link></li>
-                  <li><Link className="navbar-brand" to="/feedback">Feedback</Link></li>
+                  {auth.accessToken && <li><Link className="navbar-brand" to="/feedback">Feedback</Link></li>}
 
                   <li className = "search-button">
                     <lord-icon

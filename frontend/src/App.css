@@ -1,5 +1,4 @@
-
-.page-container{
+.page-container {
   margin-left: 111.6px;
   margin-right: 111.6px;
   position: relative;
@@ -10,23 +9,24 @@
   height: 100vh;
 }
 
-.rounded-dialog{
+.rounded-dialog {
   border-radius: 30px;
 }
 
-.ashadow{
-  box-shadow: 0 11px 34px 0 rgba(0,0,0,.2);
+.ashadow {
+  box-shadow: 0 11px 34px 0 rgba(0, 0, 0, .2);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
 @keyframes appear-animation {
-    
+
   0% {
     transform: translateY(-2rem);
     opacity: 0;
   }
-  100% { 
+
+  100% {
     transform: translateY(0rem);
     opacity: 1;
   }

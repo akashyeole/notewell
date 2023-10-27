@@ -31,7 +31,6 @@
     outline: none !important;
     border:1px solid var(--default-l-a)!important;
     box-shadow: 0 0 0 0.05rem var(--default-l-a)!important;
-    z-index: 1;
 }
 
 .text-input.error input{

@@ -6,7 +6,7 @@ const ProtectedRoute = () => {
     const location = useLocation();
 
     return (
-        auth?.token
+        auth?.accessToken
             ? <Outlet/>
             : <Navigate to='/user' state={{from: location}} replace/>
     );

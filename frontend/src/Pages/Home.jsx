@@ -1,16 +1,30 @@
-import React, { useContext }from 'react'
-import authContext from '../Context/authentication/authContext'
+import React, {  useEffect }from 'react';
+import { useAxiosPrivate } from '../Hooks';
+import './Home.css';
+import book from '../Images/book.gif'
 
 const Home = () => {
-  const { auth } = useContext(authContext);
+  const axiosPrivate = useAxiosPrivate();
+  useEffect(()=>{
+    const getNotes = async () => {
+      try{
+        const resp = await axiosPrivate.get('/api/v1/note/getallnotes')
+        console.log(resp)
+      }catch(e){
+        console.log(e);
+      }
+    }
+
+    getNotes();
+  });
+
   return (
-    <div className='page-container'>
-      {
-        auth.token && <div>{auth.token}</div>
-      }
-      {
-        !auth.token && <div>Please Login</div>
-      }
+    <div className='page-container '>
+      <div className='content-container'>
+        <div className="home-page-logo-container">
+          <img src={book} className="" />
+        </div>
+      </div>
     </div>
   )
 }

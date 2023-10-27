@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const {body} = require("express-validator");
-const { registerUser, loginUser, getUser } = require("../controllers/AuthController");
-const fetchUser = require("../middleware/fetchuser");
+const { registerUser, loginUser, getUser, refreshTheToken, logoutUser } = require("../controllers/AuthController");
+const verifyJWT = require("../middleware/verifyJWT");
 
 // User registeration route
 router.post("/registeruser", 
@@ -23,10 +23,16 @@ router.post("/loginuser",
     loginUser
 )
 
+// Logout route
+router.get("/logoutuser", logoutUser);
+
 // Fetch logged in user route
-router.post("/getuserbytoken",
-    fetchUser,
+router.get("/getuser",
+    verifyJWT,
     getUser
 )
+
+// Ger fresh access token
+router.get("/refreshtoken", refreshTheToken);
 
 module.exports = router;
