@@ -1,0 +1,200 @@
+.home-page-logo-container{
+    min-width: 20rem;
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1
+}
+
+.home-page-main-logo{
+    height: 10rem;
+    width: 10rem;
+    z-index: 10;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.home-page-logo-container .logo-item{
+    position: absolute;
+    background-color:  #d6ecfc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lg1{
+    animation: an1 60s linear infinite;
+    height: 7rem;
+    width: 7rem;
+    z-index: 9
+}
+#lg1 .lordlg{
+    height: 6rem;
+    width: 6rem;
+}
+@keyframes an1 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(40deg) translateX(-8rem) rotate(-40deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(40deg) translateX(-7rem) rotate(-40deg) scale(1)
+    }
+    100% {
+        transform: rotate(400deg) translateX(-7rem) rotate(-400deg)
+    }
+}
+
+#lg2{
+    animation: an2 60s linear infinite;
+    height: 2rem;
+    width: 2rem;
+    z-index: 7
+}
+#lg2 .lordlg{
+    height: 1rem;
+    width: 1rem;
+}
+@keyframes an2 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(5deg) translateX(-9.5rem) rotate(-5deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(5deg) translateX(-8.5rem) rotate(-5deg) scale(1)
+    }
+    100% {
+        transform: rotate(365deg) translateX(-8.5rem) rotate(-365deg)
+    }
+}
+
+#lg3{
+    animation: an3 60s linear infinite;
+    height: 4rem;
+    width: 4rem;
+    z-index: 7
+}
+#lg3 .lordlg{
+    height: 3rem;
+    width: 3rem;
+}
+@keyframes an3 {
+    0%{
+        transform: translateX(0rem)
+    }
+    1% {
+        transform: rotate(-10deg) translateX(-8rem) rotate(10deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(-10deg) translateX(-7rem) rotate(10deg) scale(1)
+    }
+    100% {
+        transform: rotate(350deg) translateX(-7rem) rotate(-350deg)
+    }
+}
+
+#lg4{
+    animation: an4 60s linear infinite;
+    height: 5rem;
+    width: 5rem;
+    z-index: 7
+}
+#lg4 .lordlg{
+    height: 4rem;
+    width: 4rem;
+}
+@keyframes an4 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(110deg) translateX(-9rem) rotate(-110deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(110deg) translateX(-8rem) rotate(-110deg) scale(1)
+    }
+    100% {
+        transform: rotate(470deg) translateX(-8rem) rotate(-470deg)
+    }
+}
+
+#lg5{
+    animation: an5 60s linear infinite;
+    height: 3.5rem;
+    width: 3.5rem;
+    z-index: 7
+}
+#lg5 .lordlg{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+@keyframes an5 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(170deg) translateX(-9rem) rotate(-170deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(170deg) translateX(-8rem) rotate(-170deg) scale(1)
+    }
+    100% {
+        transform: rotate(530deg) translateX(-8rem) rotate(-530deg)
+    }
+}
+
+#lg6{
+    animation: an6 60s linear infinite;
+    height: 7rem;
+    width: 7rem;
+    z-index: 6
+}
+#lg6 .lordlg{
+    height: 6rem;
+    width: 6rem;
+}
+@keyframes an6 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(200deg) translateX(-8rem) rotate(-200deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(200deg) translateX(-7rem) rotate(-200deg) scale(1)
+    }
+    100% {
+        transform: rotate(560deg) translateX(-7rem) rotate(-560deg)
+    }
+}
+
+#lg7{
+    animation: an7 60s linear infinite;
+    height: 6rem;
+    width: 6rem;
+    z-index: 6
+}
+#lg7 .lordlg{
+    height: 5rem;
+    width: 5rem;
+}
+@keyframes an7 {
+    0%{
+        transform: translateX(0rem)
+    }
+    0.7% {
+        transform: rotate(280deg) translateX(-8rem) rotate(-280deg) scale(1.05)
+    }
+    1.5% {
+        transform: rotate(280deg) translateX(-7rem) rotate(-280deg) scale(1)
+    }
+    100% {
+        transform: rotate(640deg) translateX(-7rem) rotate(-640deg)
+    }
+}

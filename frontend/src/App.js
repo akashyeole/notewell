@@ -8,24 +8,7 @@ import AuthState from './Context/authentication/AuthState';
 import Layout from './Layout';
 import ProtectedRoute from './Pages/ProtectedRoute';
 
-function App() {
-  
-  useEffect(()=>{
-    const onPageLoad = () => {
-      let otes = document.getElementsByClassName("l-small");
-      for(let i = 0; i < otes.length; i++){
-        otes[i].classList.add("logo-anime");
-      }
-    };
-    if (document.readyState === 'complete') {
-      onPageLoad();
-    } else {
-      window.addEventListener('load', onPageLoad);
-      return () => window.removeEventListener('load', onPageLoad);
-    }
-    
-  },[]);
-  
+function App() {  
 
   return (
     <>

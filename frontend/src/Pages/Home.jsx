@@ -1,7 +1,8 @@
 import React, {  useEffect }from 'react';
 import { useAxiosPrivate } from '../Hooks';
 import './Home.css';
-import book from '../Images/book.gif'
+import HomeLogo from '../Components/Logo/HomeLogo';
+import Logo from '../Components/Logo/Logo';
 
 const Home = () => {
   const axiosPrivate = useAxiosPrivate();
@@ -20,10 +21,8 @@ const Home = () => {
 
   return (
     <div className='page-container '>
-      <div className='content-container'>
-        <div className="home-page-logo-container">
-          <img src={book} className="" />
-        </div>
+      <div className='home-content-container'>
+        <HomeLogo/>
       </div>
     </div>
   )

@@ -1,28 +1,28 @@
 .logo-container{
     /* margin-left: -6px; */
     font-family: 'SF Pro';
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .l-caps{
     color: var(--default-l-a);
 }
 
-@keyframes logo-animator {
+/* @keyframes logo-animator {
     
     0% {transform: translateX(-50px);
-        /* width: 0px; */
+        width: 0px;
         width: 0%;
         opacity: 0;
     }
     50%{
-        /* transform: translateX(-25px); */
+        transform: translateX(-25px);
         width: 50%;
         opacity: 50;
     }
     100% { transform: translateX(0px);
         width: 100%;
-        /* visibility: visible; */
+        visibility: visible;
         opacity: 100;
     }
 }
@@ -38,4 +38,4 @@
     animation-name: logo-animator;
     animation-duration: 1700ms;
     animation-fill-mode: forwards;
-}
+} */
