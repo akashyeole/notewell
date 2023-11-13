@@ -8,11 +8,12 @@
 }
 
 .home-page-main-logo{
-    height: 10rem;
-    width: 10rem;
+    height: 9rem;
+    width: 9rem;
     z-index: 10;
-    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    /* -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); */
+    border-radius: 50%;
 }
 
 .home-page-logo-container .logo-item{
@@ -22,10 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 1s ease-in-out;
 }
 
 #lg1{
-    animation: an1 60s linear infinite;
+    animation: an1 70s linear infinite;
     height: 7rem;
     width: 7rem;
     z-index: 9
@@ -36,7 +38,7 @@
 }
 @keyframes an1 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10) 
     }
     0.7% {
         transform: rotate(40deg) translateX(-8rem) rotate(-40deg) scale(1.05)
@@ -44,13 +46,16 @@
     1.5% {
         transform: rotate(40deg) translateX(-7rem) rotate(-40deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(400deg) translateX(-7rem) rotate(-400deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg2{
-    animation: an2 60s linear infinite;
+    animation: an2 70s linear infinite;
     height: 2rem;
     width: 2rem;
     z-index: 7
@@ -61,7 +66,7 @@
 }
 @keyframes an2 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     0.7% {
         transform: rotate(5deg) translateX(-9.5rem) rotate(-5deg) scale(1.05)
@@ -69,13 +74,16 @@
     1.5% {
         transform: rotate(5deg) translateX(-8.5rem) rotate(-5deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(365deg) translateX(-8.5rem) rotate(-365deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg3{
-    animation: an3 60s linear infinite;
+    animation: an3 70s linear infinite;
     height: 4rem;
     width: 4rem;
     z-index: 7
@@ -86,7 +94,7 @@
 }
 @keyframes an3 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     1% {
         transform: rotate(-10deg) translateX(-8rem) rotate(10deg) scale(1.05)
@@ -94,13 +102,16 @@
     1.5% {
         transform: rotate(-10deg) translateX(-7rem) rotate(10deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(350deg) translateX(-7rem) rotate(-350deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg4{
-    animation: an4 60s linear infinite;
+    animation: an4 70s linear infinite;
     height: 5rem;
     width: 5rem;
     z-index: 7
@@ -111,7 +122,7 @@
 }
 @keyframes an4 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     0.7% {
         transform: rotate(110deg) translateX(-9rem) rotate(-110deg) scale(1.05)
@@ -119,13 +130,16 @@
     1.5% {
         transform: rotate(110deg) translateX(-8rem) rotate(-110deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(470deg) translateX(-8rem) rotate(-470deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg5{
-    animation: an5 60s linear infinite;
+    animation: an5 70s linear infinite;
     height: 3.5rem;
     width: 3.5rem;
     z-index: 7
@@ -136,7 +150,7 @@
 }
 @keyframes an5 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     0.7% {
         transform: rotate(170deg) translateX(-9rem) rotate(-170deg) scale(1.05)
@@ -144,13 +158,16 @@
     1.5% {
         transform: rotate(170deg) translateX(-8rem) rotate(-170deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(530deg) translateX(-8rem) rotate(-530deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg6{
-    animation: an6 60s linear infinite;
+    animation: an6 70s linear infinite;
     height: 7rem;
     width: 7rem;
     z-index: 6
@@ -161,7 +178,7 @@
 }
 @keyframes an6 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     0.7% {
         transform: rotate(200deg) translateX(-8rem) rotate(-200deg) scale(1.05)
@@ -169,13 +186,16 @@
     1.5% {
         transform: rotate(200deg) translateX(-7rem) rotate(-200deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(560deg) translateX(-7rem) rotate(-560deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
 #lg7{
-    animation: an7 60s linear infinite;
+    animation: an7 70s linear infinite;
     height: 6rem;
     width: 6rem;
     z-index: 6
@@ -186,7 +206,7 @@
 }
 @keyframes an7 {
     0%{
-        transform: translateX(0rem)
+        transform: translateX(0rem) scale(0.10)
     }
     0.7% {
         transform: rotate(280deg) translateX(-8rem) rotate(-280deg) scale(1.05)
@@ -194,7 +214,10 @@
     1.5% {
         transform: rotate(280deg) translateX(-7rem) rotate(-280deg) scale(1)
     }
-    100% {
+    99.5% {
         transform: rotate(640deg) translateX(-7rem) rotate(-640deg)
+    }
+    100% {
+        transform: translateX(0);
     }
 }
