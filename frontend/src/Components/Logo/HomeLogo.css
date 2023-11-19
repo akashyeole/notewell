@@ -1,6 +1,6 @@
 .home-page-logo-container{
     min-width: 20rem;
-    min-height: 25rem;
+    min-height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,12 +8,13 @@
 }
 
 .home-page-main-logo{
-    height: 9rem;
-    width: 9rem;
+    height: 10rem;
+    width: 10rem;
     z-index: 10;
-    /* -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); */
+    background: #fbfbfd38;
     border-radius: 50%;
+    pointer-events: none!important;
+    user-select: none!important;
 }
 
 .home-page-logo-container .logo-item{
@@ -24,10 +25,27 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease-in-out;
+    user-select: none;
+}
+
+body.dark .home-page-logo-container .logo-item{
+    background-color:  #d6ecfc74;
+}
+
+@keyframes sc{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.03;
+    }
+    100%{   
+        scale: 1
+    }
 }
 
 #lg1{
-    animation: an1 70s linear infinite;
+    animation: an1 70s linear infinite, sc 2s linear infinite ;
     height: 7rem;
     width: 7rem;
     z-index: 9
@@ -55,10 +73,11 @@
 }
 
 #lg2{
-    animation: an2 70s linear infinite;
+    animation: an2 70s linear infinite, sc 2s linear infinite ;
     height: 2rem;
     width: 2rem;
-    z-index: 7
+    z-index: 7;
+    background-image: linear-gradient(#ef851a, #eeaa66);
 }
 #lg2 .lordlg{
     height: 1rem;
@@ -83,7 +102,7 @@
 }
 
 #lg3{
-    animation: an3 70s linear infinite;
+    animation: an3 70s linear infinite, sc 2s linear infinite ;
     height: 4rem;
     width: 4rem;
     z-index: 7
@@ -111,9 +130,10 @@
 }
 
 #lg4{
-    animation: an4 70s linear infinite;
+    animation: an4 70s linear infinite, sc 2s linear infinite ;
     height: 5rem;
     width: 5rem;
+    background-image: linear-gradient(#158eff, #6ec2fd);
     z-index: 7
 }
 #lg4 .lordlg{
@@ -139,7 +159,7 @@
 }
 
 #lg5{
-    animation: an5 70s linear infinite;
+    animation: an5 70s linear infinite, sc 2s linear infinite ;
     height: 3.5rem;
     width: 3.5rem;
     z-index: 7
@@ -167,10 +187,15 @@
 }
 
 #lg6{
-    animation: an6 70s linear infinite;
+    animation: an6 70s linear infinite, sc 2s linear infinite ;
     height: 7rem;
     width: 7rem;
-    z-index: 6
+    z-index: 6;
+    background: #f1dafa;
+}
+body.dark #lg6{
+    background: #f1dafa80;
+    
 }
 #lg6 .lordlg{
     height: 6rem;
@@ -195,10 +220,10 @@
 }
 
 #lg7{
-    animation: an7 70s linear infinite;
+    animation: an7 70s linear infinite, sc 2s linear infinite ;
     height: 6rem;
     width: 6rem;
-    z-index: 6
+    z-index: 6;
 }
 #lg7 .lordlg{
     height: 5rem;

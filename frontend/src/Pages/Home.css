@@ -8,11 +8,34 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 1rem;
 }
 
-body.light .home-content-container .l-caps{
-    color: black!important;
+.home-content-container .l-caps, .home-content-container .l-small{
+    user-select: none!important;
+    pointer-events: none!important;
+    font-weight: 700;
 }
-body.dark .home-content-container .l-caps{
-    color: white!important;
+.home-sign-btn{
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    width: 9rem;
+    text-align: center;
+    padding: 0.6rem 2rem 0.1rem 2rem
+}
+
+.home-sign-btn:hover{
+    background-color: rgb(95, 95, 95);
+    cursor: pointer;
+}
+
+.home-title{
+    padding-top: 1rem;
+    font-size: 40px;
+    width: 45%;
+    font-family: "SF Pro Display Semibold";
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.6rem;
 }

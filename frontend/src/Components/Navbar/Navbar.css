@@ -7,7 +7,7 @@
     transition: all 400ms ease;
     background: rgba(0,0,0, 0.4);
     height: 3rem;
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(20px);
     /* transition: all 400ms ease; */
 }
 
@@ -346,7 +346,7 @@ body.light .search-container .quick-links li .navbar-brand{
     .nav-container.active .desktop-nav{
         height: 100%;
         backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(100px) ;
+        -webkit-backdrop-filter: blur(20px) ;
     }
     
     /* .desktop-nav{

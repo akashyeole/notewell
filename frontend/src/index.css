@@ -16,6 +16,11 @@
   src:url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Black.ttf") 
 }
 
+@font-face {
+  font-family: "SF Pro Display Semibold";
+  src:url("./Fonts/SF\ Pro\ Fonts/SF-Pro-Display-Semibold.otf") 
+}
+
 *, *::before, *::after{
   box-sizing: border-box;
   padding: 0;
