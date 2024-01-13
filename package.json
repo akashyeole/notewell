@@ -9,6 +9,7 @@
     "lerna": "^8.0.2"
   },
   "scripts": {
-    "start": "lerna run start --stream"
+    "start": "lerna run start --stream",
+    "build:remote": "lerna run build:frontendr"
   }
 }
