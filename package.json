@@ -11,7 +11,7 @@
     "lerna": "^8.0.2"
   },
   "scripts": {
-    "start:notewell" : "run-p start:frontend start:backend",
+    "notewell" : "run-p start:frontend start:backend",
     "start:backend" : "lerna run start:backend-local",
     "start:frontend" : "lerna run start:frontend-local"
   }
