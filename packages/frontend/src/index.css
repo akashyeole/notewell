@@ -5,6 +5,16 @@
   --light: #fbfbfd;
 }
 
+:root::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+/* {
+} */
+
 @font-face {
   font-family: "SF Pro";
   src: url("./Fonts/SF\ Pro\ Fonts/SF-Pro.ttf");

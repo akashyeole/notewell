@@ -29,12 +29,12 @@ const Home = () => {
           <h5>Sign In</h5>
         </div>
         <div className='home-title'>
-        The best place for all your photos, files, notes, mail, and more.
+        The best place for all your flies, notes and documents.
         </div>
         <div className='home-info'>
           <div className='info-card ashadow rounded-dialog'>
             <img className="home-info-img" src={PHImg}/>
-            <div className="info-title">Easily access apps and data from your iPhone on the web</div>
+            <div className="info-title">Easily access your notes and documents from anywhere</div>
             <div className="info-desc">
             iCloud is essential for keeping personal information from your devices safe, up to date, and available wherever you are. At iCloud.com, you can access your photos, files, and more from any web browser. Changes you make will sync to your iPhone and other devices, so you’re always up to date.
             </div>
